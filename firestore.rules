@@ -1,0 +1,20 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{user} {
+      allow read: if request.auth.uid != null;
+    }
+    match /online/{user} {
+      allow read: if request.auth.uid != null;
+    }
+    match /generalMessages/{message} {
+      allow read: if request.auth.uid != null;
+    }
+    match /privateMessages/{userAuthId}/to/{message} {
+      allow read: if request.auth.uid == userAuthId;
+    }
+    match /privateMessages/{userAuthId}/from/{message} {
+      allow read: if request.auth.uid == userAuthId;
+    }
+  }
+}
