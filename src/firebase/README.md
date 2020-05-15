@@ -1,4 +1,4 @@
-For security reasons, I have hidden my firebase config file with my apiKey. If you would like to recreate the same functionality, all you can follaw these steps.
+For security reasons, I have hidden my firebase config file with my apiKey. If you would like to recreate the same functionality, all you have to do is follow these steps.
 
 1. Go to the [Firebase Console](https://console.firebase.google.com/) and sign in with a google account if you're not already signed in.
 
